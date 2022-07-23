@@ -1,0 +1,209 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+html{
+	width: 100%;
+	height: 100vh;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	color: #f7f7f5;
+}
+body{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../images/bg-intro-desktop.png);
+	background-color:hsl(0, 100%, 74%);
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	flex-wrap: wrap;
+}
+/* referente ao box de informação*/
+
+.box__information{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 50%;
+}
+.card__information{
+	width: 100%;
+	height: 100%;
+}
+.card__information__title{
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 48px;
+	padding-bottom: 2rem;
+}
+.card__information__text{
+	font-weight: 500;
+	color: hsl(246, 25%, 95%);
+}
+/* referente ao box de formulario*/
+.box__form{
+	flex-basis:50%;
+}
+.card__form__info{
+	background-color:hsl(248, 32%, 49%);
+	width: 100%;
+	height: 55px;
+	border-radius: 8px;
+	box-shadow: 0px 8px 0px rgba(0,0,0,22%);
+	margin-bottom:1.6rem;
+}
+.card__form__info__text{
+	text-align: center;
+	padding-top: 14px;
+}
+.card__form__info__bold{
+	font-weight: 600;
+}
+.card__form{
+	max-width: 100%;
+	background-color:#ffffff;
+	border-radius: 9px;
+	box-shadow: 0px 8px 0px rgba(0,0,0,22%);
+	padding: 1.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1rem;
+}
+.form__control{
+	width: 100%;
+}
+.msg{
+	float: right;
+	color:hsl(0, 100%, 74%);
+}
+input,button{
+	width: 100%;
+	height: 48px;
+	border-radius: 4px;
+	border:1px solid hsl(246, 25%, 77%);
+}
+input{
+	padding: 0px 20px;
+	color: hsl(246, 25%, 77%);
+	font-weight: 600;
+}
+input::placeholder{
+	color: #807f7e;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+}
+input:focus{
+	border-color: hsl(246, 25%, 77%);
+}
+#button{
+	background-color:hsl(154, 59%, 51%);
+	color: #ffffff;
+	font-weight: 600;
+	border: 2px groove hsl(154, 59%, 51%);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 1.2s;
+}
+#button:hover{
+	opacity: 70%;
+}
+.card__form__term{
+	color: hsl(246, 25%, 77%);
+	font-size:12px;
+	text-align: center;
+	font-weight: 500;
+}
+.card__form__term__red{
+	color: hsl(0, 100%, 74%);
+	font-weight: 700;
+}
+
+/*mensagem de erro*/
+.error input{
+	color: hsl(0, 100%, 74%);
+	border:2px solid hsl(0, 100%, 74%);
+	background-image:url(../images/icon-error.svg);
+	background-repeat: no-repeat;
+	background-position:95%;
+}
+/*mensagem de sucesso*/
+.sucess input{
+	color: hsl(154, 59%, 51%);
+	border:2px solid hsl(154, 59%, 51%);
+	background-image:url(../images/icon-sucess.svg);
+	background-size: 24px,24px;
+	background-repeat: no-repeat;
+	background-position:95%;
+}
+.sucess .msg{
+	display: none;
+}
+/*media query tablet*/
+
+@media screen and (max-width: 907px){
+	.container{
+		width: 100%;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.card__information__title,.card__information__text{
+		text-align: center;
+	}
+	.card__information__text{
+		padding:0px 9rem;
+	}
+}
+@media (max-width: 450px){
+	body{
+		width: 100vw;
+		height: 100vh;
+		background-image: url(../images/bg-intro-mobile.png);
+	}
+	.box__information{
+		flex-basis: 100%;
+	}
+	.card__information{
+		width: 100vw;
+	}
+	.card__information__title{
+		font-size:2rem;
+		padding-bottom: 0px;
+	}
+	.card__information__text{
+		font-size:15px;
+		padding: 0px 10px;
+	}
+	.box__form{
+		padding:0px 2rem;
+	}
+	.card__form__info{
+		height: 70px;
+	}
+	.card__form__info__text{
+		padding: 10px 4rem;
+	}
+	input,button{
+		height: 40px;
+	}
+	input{
+		font-size:13px;
+	}
+}
